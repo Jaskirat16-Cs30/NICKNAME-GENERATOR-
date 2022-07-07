@@ -31,13 +31,23 @@ while menu== True:
             print(firstNam,"'",names,"'",lastNam)
 #Add a Nickname
     elif option == "4":
+        print("\nAdd a Nickname")
         newNam = input('\nPlease enter a nickname to add:')
         if newNam in nickNam:
             print(newNam," is already in the nickname list.")
         else:
              nickNam.append(newNam)
              print(newNam," added to the nickname list.")
-
+#Remove a Nickname
+    elif option == "5":
+        print("\nRemove a Nickname")
+        remoNam= input("Please enter a nickname to remove: ")
+        if remoNam in nickNam:
+            nickNam.remove(remoNam)
+            print(remoNam," has been removed from the nickname list.")
+        else:
+            print(remoNam," was not found in the nickname list.")
+#Exit
     elif option == "6":
         print("\nExited")
         menu = False
